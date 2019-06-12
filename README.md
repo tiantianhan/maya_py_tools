@@ -1,2 +1,2 @@
-# maya_py_tools
-Python tools for Maya
+# Maya python tools
+Python tools for Maya.
