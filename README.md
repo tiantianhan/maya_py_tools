@@ -1,6 +1,9 @@
 # Maya python tools
 Python tools for Maya.
 
+## loadSubstanceMaps.py
+Browse for a folder containing Substance Painter texture maps and import as an aiStandardSurface.
+
 ## lockit.py and unlockit.py
 Simple scripts for the shelf to lock and unlock the translation, rotation and scale of selected objects.
 Motivation: useful for reference objects
