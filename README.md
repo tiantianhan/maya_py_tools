@@ -1,6 +1,13 @@
 # Maya python tools
 Python tools for Maya.
 
+## loadSubstanceMaps.py
+Browse for a folder containing Substance Painter texture maps and import as an aiStandardSurface.
+
+## lockit.py and unlockit.py
+Simple scripts for the shelf to lock and unlock the translation, rotation and scale of selected objects.
+Motivation: useful for reference objects
+
 ## manualBackup.py
 Simple script to save a backup copy of current file elsewhere while remaining on the current file. Similar to QuickSave in ZBrush, with the difference being the user must name the new file. Equivalent to save as followed by re-opening the original file.
 
