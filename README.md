@@ -2,25 +2,34 @@
 Python tools for Maya. Can be installed as custom tools via the script editor.
 
 ## General install instructions
-1. `git clone` or this repo to desired location
+1. `git clone` or download this repo to desired location
 2. In Maya, open Windows > General Editors > Script Editor
 3. In the script editor, select File > Open Script...
-4. Browse for the script to install and open. Script should show up in the editor.
+4. Browse for the script you wish to install and Open. The script should show up in the editor.
 5. Select File > Save Script to Shelf..., and give the tool a name of your choice
 
 ## loadSubstanceMaps.py
-Browse for a folder containing Substance Painter texture maps and import as an aiStandardSurface.
+Browse for a folder containing Substance Painter texture maps and import as an aiStandardSurface. 
+* Creates the nodes for BaseColor, Normal, Metalness and Roughness maps. 
+* Uses the appropriate color space (Raw or sRGB) for each map.
 
 ### Demo 
-_Coming soon_
+![Load substance maps demo](demos/load_maps_tool.gif)
 
 ### Motivation
-This is a commonly required feature, maps exported from Substance Painter can be tedious to apply to objects. This allows a folder of maps to be applied to objects in one click.
+This is a commonly required feature, maps exported from Substance Painter can be tedious to apply to objects. This allows a folder of maps to be imported as aiStandardSurface with one click.
 
 ### Usage
 1. Create custom shelf tool (see above install instructions)
-2. Click on tool, select the folder that contains the maps from substance painter
+2. Click on tool, click Browse to select the folder that contains the maps from Substance Painter
 3. Click "Import as aiStandardSurface" to import
+4. Open Hypershade to view the aiStandardSurface nodes and apply the aiStandardSurface to the model
+5. Press "6" to display texture maps in the viewport for preview
+
+### Major Limitations
+ 1. Does not currently handle the height map
+ 2. When browsing for the folder of maps, the maps contained in the folder cannot be viewed
+ 3. The maps in the folder must be named in the original _BaseColor or _Normal format in order to be recognized
 
 ## lockit.py and unlockit.py
 Simple scripts for the shelf to lock and unlock the translation, rotation and scale of selected objects.
