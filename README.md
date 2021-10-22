@@ -1,12 +1,21 @@
 # Maya python tools
-Python tools for Maya. Can be installed as custom tools via the script editor.
+Python tools for Maya. Can be installed as custom tools via the script editor. 
+
+The tools were developed and tested in Maya 2020.
 
 ## General install instructions
-1. `git clone` or download this repo to desired location
-2. In Maya, open Windows > General Editors > Script Editor
-3. In the script editor, select File > Open Script...
-4. Browse for the script you wish to install and Open. The script should show up in the editor.
-5. Select File > Save Script to Shelf..., and give the tool a name of your choice
+1. `git clone` or download this repo to your desired location
+1. Add the path to the folder containing the scripts to your `userSetup.py` file. This file is usually located in  `Documents\maya\<version>\scripts`. Add the lines in the file.
+   ```
+    import sys
+
+    sys.path.append("<Path to the folder>")
+   ```
+1. Restart Maya. This will run userSetup.py for the change to the path to take effect.
+1. In Maya, open Windows > General Editors > Script Editor
+1. In the script editor, select File > Open Script...
+1. Browse for the script you wish to install and Open. The script should show up in the editor.
+1. Select File > Save Script to Shelf..., and give the tool a name of your choice
 
 ## loadSubstanceMaps.py
 Browse for a folder containing Substance Painter texture maps and import as an aiStandardSurface. 
@@ -35,7 +44,7 @@ This is a commonly required feature, maps exported from Substance Painter can be
 Simple scripts for the shelf to lock and unlock the translation, rotation and scale of selected objects.
 
 ### Demo
-_Coming soon_
+![Lock demo](demos/lock_unlock.gif)
 
 ### Motivation
 Allows for locking reference objects or cameras with one click rather than selecting each attribute individually.
